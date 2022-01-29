@@ -193,7 +193,7 @@ namespace HomeWork_Theme03_04
             }
             else if (difficulty == 3)
             {
-                Console.WriteLine("Выбран режим против кудахтера.");
+                Console.WriteLine("Выбран режим против компьютера.");
 
                 Console.WriteLine("Игрок, введите свой никнейм:");
                 string nickname = Console.ReadLine();
