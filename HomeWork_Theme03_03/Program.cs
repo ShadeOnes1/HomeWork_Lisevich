@@ -29,7 +29,7 @@ namespace HomeWork_Theme03_03
                 }
                 else
                 {
-                    Console.WriteLine("Число сложное");
+                    Console.WriteLine("Число составное");
                 }
             }
             while (true);
