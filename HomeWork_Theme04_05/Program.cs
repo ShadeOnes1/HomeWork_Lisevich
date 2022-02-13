@@ -15,12 +15,19 @@ namespace HomeWork_Theme04_05
             
             for (int i = 0; i < n; i++)
             {
-                matrix[i] = new int[i + 1];
-
-                for (int j = 0; j < matrix[i].Length; j++)
+                //matrix[i] = new int[i + 1];
+                for (int c = 0; c <= (n - i); c++)
                 {
-                    matrix[i][j] = Fact(i) / (Fact(j) * Fact(i - j));
+                    Console.Write(" ");
                 }
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write(" ");
+                    //matrix[i][j] = Fact(i) / (Fact(j) * Fact(i - j));
+                    Console.Write(Fact(i) / (Fact(j) * Fact(i - j)));
+                }
+                Console.WriteLine();
+                Console.WriteLine();
             }
 
             for (int i = 0; i < matrix.Length; i++)
