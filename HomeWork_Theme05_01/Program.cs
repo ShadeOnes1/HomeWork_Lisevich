@@ -4,11 +4,20 @@ namespace HomeWork_Theme05_01
 {
     class Program
     {
+        /// <summary>
+        /// Метод разделяет предложение на слова
+        /// </summary>
+        /// <param name="sourceString"></param>
+        /// <returns></returns>
         static string[] DataSeparation(string sourceString) 
         {
             return sourceString.Split(' ');
         }
 
+        /// <summary>
+        /// Метод выводящий слова построчно
+        /// </summary>
+        /// <param name="separatedString"></param>
         static void Output(string[] separatedString)
         {
             for (int i = 0; i < separatedString.Length; i++)
