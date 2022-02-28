@@ -4,6 +4,10 @@ namespace HomeWork_Theme05_07
 {
     class Program
     {
+        /// <summary>
+        /// Метод заполняет одномерный массив чисел 
+        /// </summary>
+        /// <returns></returns>
         static int[] InputRow()
         {
             string[] row = Console.ReadLine().Split(' ');
@@ -15,6 +19,11 @@ namespace HomeWork_Theme05_07
             return rowInt;
         }
 
+        /// <summary>
+        /// Метод принимает одномерный массив и проверяет на соответсвие его арифметической прогрессии
+        /// </summary>
+        /// <param name="rowInt"></param>
+        /// <returns></returns>
         static bool IsAriph(int[] rowInt)
         {
             int d = rowInt[1] - rowInt[0];
@@ -28,6 +37,11 @@ namespace HomeWork_Theme05_07
             return true;
         }
 
+        /// <summary>
+        /// Метод принимает одномерный массив и проверяет на соответсвие его геометрической прогрессии
+        /// </summary>
+        /// <param name="rowInt"></param>
+        /// <returns></returns>
         static bool IsGeometry(int[] rowInt)
         {
             double d = rowInt[1] / rowInt[0];

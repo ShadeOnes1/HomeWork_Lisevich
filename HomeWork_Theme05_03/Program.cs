@@ -4,6 +4,10 @@ namespace HomeWork_Theme05_03
 {
     class Program
     {
+        /// <summary>
+        /// Метод возвращает рандомное чичсло (диапазон 0-10)
+        /// </summary>
+        /// <returns></returns>
         static int CreateNumber()
         {
             Random r = new Random();
@@ -13,6 +17,10 @@ namespace HomeWork_Theme05_03
             return N;
         }
 
+        /// <summary>
+        /// Метод возвращает двумерный массив (матрицу) 3 на 3 
+        /// </summary>
+        /// <returns></returns>
         static int[,] CreateMatrix()
         {
             Random r = new Random();
@@ -31,6 +39,12 @@ namespace HomeWork_Theme05_03
             }
             return M;
         }
+
+        /// <summary>
+        /// Метод умножает матрицу на число и выводит результат
+        /// </summary>
+        /// <param name="M"></param>
+        /// <param name="N"></param>
         static void OutputResult(int[,] M, int N)
         {
             Console.WriteLine("Итоговая матрица: ");
@@ -46,6 +60,7 @@ namespace HomeWork_Theme05_03
                 Console.WriteLine();
             }
         }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Задание 1.1.");

@@ -16,6 +16,12 @@ namespace HomeWork_Theme05_08
             Console.WriteLine($"А(1, 2) = {ResultFunc(k, l)}");
         }
 
+        /// <summary>
+        /// Метод принимает два числа и возвращает число посчитанное по функции Аккермана
+        /// </summary>
+        /// <param name="m"></param>
+        /// <param name="n"></param>
+        /// <returns></returns>
         static int ResultFunc(int m, int n)
         {
             if (m > 0 && n == 0)

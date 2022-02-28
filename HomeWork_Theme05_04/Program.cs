@@ -4,6 +4,10 @@ namespace HomeWork_Theme05_04
 {
     class Program
     {
+        /// <summary>
+        /// Метод возвращает двумерный массив 3 на 3
+        /// </summary>
+        /// <returns></returns>
         static int[,] GetFirstMatrix()
         {
             Random r = new Random();
@@ -22,6 +26,11 @@ namespace HomeWork_Theme05_04
             }
             return matrix1;
         }
+
+        /// <summary>
+        /// Метод возвращает двумерный массив 3 на 3
+        /// </summary>
+        /// <returns></returns>
         static int[,] GetSecondMatrix()
         {
             Random r = new Random();
@@ -40,6 +49,12 @@ namespace HomeWork_Theme05_04
             }
             return matrix2;
         }
+
+        /// <summary>
+        /// Метод принимает два двумерных массива и вычисляет их сумму с выводом на экран результата
+        /// </summary>
+        /// <param name="matrix1"></param>
+        /// <param name="matrix2"></param>
         static void ResultSum(int[,] matrix1, int[,] matrix2)
         {
             Console.WriteLine("Сумма матриц: ");
@@ -55,6 +70,12 @@ namespace HomeWork_Theme05_04
                 Console.WriteLine();
             }
         }
+
+        /// <summary>
+        /// Метод принимает два двумерных массива и вычисляет их произведение с выводом на экран результата
+        /// </summary>
+        /// <param name="matrix1"></param>
+        /// <param name="matrix2"></param>
         static void ResultComp(int[,] matrix1, int[,] matrix2)
         {
             Console.WriteLine("Произведение матриц: ");
