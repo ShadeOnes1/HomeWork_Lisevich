@@ -40,15 +40,15 @@ namespace HomeWork_Theme06_01
 
         static void Read()
         {
-            using (StreamReader sr = new StreamReader("data.csv"))
+            using (StreamReader sr = new StreamReader(@"data.txt"))
             {
                 string line;
-                Console.WriteLine($"{"ID"}{"ФИО"}{"Дата"}{"Возраст"}{"Рост"}{"Дата рождения"}{"Место рождения"}");
+                //Console.WriteLine($"{"ID"} {"ФИО"} {"Дата"} {"Возраст"} {"Рост"} {"Дата рождения"} {"Место рождения"}");
 
                 while ((line = sr.ReadLine()) != null)
                 {
                     string[] data = line.Split('#');
-                    Console.WriteLine($"{data[0]}{data[1]}{data[2]}{data[3]}{data[4]}{data[5]}{data[6]}");
+                    Console.WriteLine($"\nID: {data[0]}\nФИО: {data[1]}\nДата создания: {data[2]}\nВозраст: {data[3]}\nРост: {data[4]}\nДата рождения: {data[5]}\nМесто рождения: {data[6]}");
                 }
             }
         }
@@ -63,7 +63,7 @@ namespace HomeWork_Theme06_01
 
             while (!isExitInput)
             {
-                Console.WriteLine("Команды:\n1 - Чтение из файла;\n2 - Запись в файл;\n <любой символ> - выход");
+                Console.WriteLine("\nКоманды:\n1 - Чтение из файла;\n2 - Запись в файл;\n <любой символ> - выход");
                 string inputedLine = Console.ReadLine();
 
                 switch (inputedLine)
