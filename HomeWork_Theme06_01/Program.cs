@@ -6,6 +6,10 @@ namespace HomeWork_Theme06_01
 {
     class Program
     {
+        /// <summary>
+        /// Метод ввода данных
+        /// </summary>
+        /// <param name="ID"></param>
         static void Input(int ID)
         {
 
@@ -38,6 +42,9 @@ namespace HomeWork_Theme06_01
             }
         }
 
+        /// <summary>
+        /// Метод вывода данных
+        /// </summary>
         static void Read()
         {
             using (StreamReader sr = new StreamReader(@"data.txt"))
