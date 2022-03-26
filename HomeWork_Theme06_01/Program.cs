@@ -6,10 +6,8 @@ namespace HomeWork_Theme06_01
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Input()
         {
-            Console.WriteLine("Сотрудники");
-
             using (StreamWriter sw = new StreamWriter("data.txt", true))
             {
                 char key = '2';
@@ -44,19 +42,29 @@ namespace HomeWork_Theme06_01
                     sw.WriteLine(note);
                     Console.Write("Продожить 1/2?"); key = Console.ReadKey(true).KeyChar;
                 } while (char.ToLower(key) == '2');
+            }
+        }
 
-                using (StreamReader sr = new StreamReader("data.csv"))
+        static void Read()
+        {
+            using (StreamReader sr = new StreamReader("data.csv"))
+            {
+                string line;
+                Console.WriteLine($"{"ID"}{"ФИО"}{"Дата"}{"Возраст"}{"Рост"}{"Дата рождения"}{"Место рождения"}");
+
+                while ((line = sr.ReadLine()) != null)
                 {
-                    string line;
-                    Console.WriteLine($"{"ID"}{"ФИО"}{"Дата"}{"Возраст"}{"Рост"}{"Дата рождения"}{"Место рождения"}");
-
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        string[] data = line.Split('#');
-                        Console.WriteLine($"{data[0]}{data[1]}{data[2]}{data[3]}{data[4]}{data[5]}{data[6]}");
-                    }
+                    string[] data = line.Split('#');
+                    Console.WriteLine($"{data[0]}{data[1]}{data[2]}{data[3]}{data[4]}{data[5]}{data[6]}");
                 }
             }
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Сотрудники");
+
+
         }
     }
 }
