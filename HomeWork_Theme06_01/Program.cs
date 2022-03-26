@@ -60,13 +60,30 @@ namespace HomeWork_Theme06_01
             }
         }
 
+        private static int GetID()
+        {
+            using (StreamReader sr = new StreamReader(@"data.txt"))
+            {
+                int ID = 0;
+
+                while (!sr.EndOfStream)
+                {
+                    sr.ReadLine();
+                    ID++;
+                }
+
+                return ID + 1;
+
+            }
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Сотрудники");
 
             bool isExitInput = false;
 
-            int ID = 1;
+            int ID = GetID();
 
             while (!isExitInput)
             {
@@ -79,8 +96,7 @@ namespace HomeWork_Theme06_01
                         Read();
                         break;
                     case "2":
-                        Input(ID);
-                        ID++;
+                        Input(ID);                        
                         break;
                     default:
                         isExitInput = true;
