@@ -41,39 +41,49 @@ namespace HomeWork_Theme06_01
                 sw.WriteLine(note);
             }
         }
-
-        /// <summary>
-        /// Метод вывода данных
-        /// </summary>
+       
         static void Read()
         {
-            using (StreamReader sr = new StreamReader(@"data.txt"))
-            {
-                string line;
-                //Console.WriteLine($"{"ID"} {"ФИО"} {"Дата"} {"Возраст"} {"Рост"} {"Дата рождения"} {"Место рождения"}");
+            string filePath = "data.txt";
 
-                while ((line = sr.ReadLine()) != null)
+            if (File.Exists(filePath))
+            {
+                using (StreamReader sr = new StreamReader(@"data.txt"))
                 {
-                    string[] data = line.Split('#');
-                    Console.WriteLine($"\nID: {data[0]}\nФИО: {data[1]}\nДата создания: {data[2]}\nВозраст: {data[3]}\nРост: {data[4]}\nДата рождения: {data[5]}\nМесто рождения: {data[6]}");
+                    string line;
+                    //Console.WriteLine($"{"ID"} {"ФИО"} {"Дата"} {"Возраст"} {"Рост"} {"Дата рождения"} {"Место рождения"}");
+
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] data = line.Split('#');
+                        Console.WriteLine($"\nID: {data[0]}\nФИО: {data[1]}\nДата создания: {data[2]}\nВозраст: {data[3]}\nРост: {data[4]}\nДата рождения: {data[5]}\nМесто рождения: {data[6]}");
+                    }
                 }
             }
         }
 
         private static int GetID()
         {
-            using (StreamReader sr = new StreamReader(@"data.txt"))
+            string filePath = "data.txt";
+
+            if (File.Exists(filePath))
             {
-                int ID = 0;
-
-                while (!sr.EndOfStream)
+                using (StreamReader sr = new StreamReader(@"data.txt"))
                 {
-                    sr.ReadLine();
-                    ID++;
+                    int ID = 0;
+
+                    while (!sr.EndOfStream)
+                    {
+                        sr.ReadLine();
+                        ID++;
+                    }
+
+                    return ID + 1;
                 }
-
-                return ID + 1;
-
+            }
+            else
+            {
+                return 1;
             }
         }
 
@@ -96,7 +106,8 @@ namespace HomeWork_Theme06_01
                         Read();
                         break;
                     case "2":
-                        Input(ID);                        
+                        Input(ID);
+                        ID++;
                         break;
                     default:
                         isExitInput = true;
